@@ -1,20 +1,18 @@
-import { useState } from 'react'
+import {  } from "react";
 
-import './App.css'
-import Chat from './components/Chat'
-import ChatUserInfo from './components/ChatUserInfo'
-import Dashboard from './components/Dashboard'
+import "./App.css";
+import Chat from "./components/pages/Chat/Chat";
+import ChatUserInfo from "./components/pages/ChatUserInfo/ChatUserInfo";
+import Dashboard from "./components/pages/Dashboard/Dashboard";
 
 function App() {
-  const [count, setCount] = useState(0)
-  console.log(count,setCount)
   return (
-    <div className=''>
+    <div className="w-[100%] max-h-screen grid grid-cols-app-grid">
+      <Dashboard />
       <Chat />
       <ChatUserInfo />
-      <Dashboard />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

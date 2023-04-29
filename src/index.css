@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+*{
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+}
