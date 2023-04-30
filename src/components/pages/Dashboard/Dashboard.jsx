@@ -7,7 +7,7 @@ function DashBoard() {
   const UserInfo = useContext(UserContext)
 
   return (
-    <div className="bg-slate-200 flex flex-col items-center gap-4">
+    <div className="bg-slate-200 flex flex-col items-center gap-4 max-h-[100vh]">
       <AdminInfolayout info={UserInfo} />
       <div className=" flex gap-1 items-center bg-white px-2 py-2 rounded-[2em]">
         <i className=" cursor-pointer fa-solid fa-magnifying-glass aspect-square rounded-[50%] w-8 flex justify-center items-center text-slate-700 hover:bg-slate-400 hover:text-black"></i>

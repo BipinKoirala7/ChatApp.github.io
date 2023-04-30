@@ -3,7 +3,7 @@ import React, { memo } from "react";
 function AdminInfoLayout(props) {
     const {name,profession,picture} = props.info
     return (
-      <div className="flex px-6 py-6 gap-4 items-center">
+      <div className="flex py-6 gap-4 items-center">
         <img
           src={picture.medium}
           alt=""
@@ -13,7 +13,7 @@ function AdminInfoLayout(props) {
           <p className="text-[1.4em] font-bold text-blue-500">{name}</p>
           <p className="">{profession}</p>
         </div>
-        <button className="border-0 font-bold aspect-square rounded-[50%] px-4 py-1 hover:bg-slate-200">
+        <button className="border-0 font-bold aspect-square rounded-[50%] px-4 py-1 hover:bg-slate-400">
           <i className="fa-solid fa-pen"></i>
         </button>
       </div>

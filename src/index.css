@@ -8,3 +8,9 @@
     font-family: 'Karla', sans-serif;
     box-sizing: border-box;
 }
+
+.hide-scrollbar{}
+
+.hide-scrollbar::-webkit-scrollbar{
+    display: none;
+}

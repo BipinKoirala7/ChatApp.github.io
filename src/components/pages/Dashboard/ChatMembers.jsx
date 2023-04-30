@@ -11,7 +11,7 @@ function ChatMembers() {
             const date = new Date(item.dob.date);
             return {
               gender: item.gender,
-              name: item.name.first + item.name.last,
+              name: item.name.first +" " + item.name.last,
               profession: "Senior Developer",
               location: {
                 city: item.location.city,
@@ -39,9 +39,16 @@ function ChatMembers() {
           AdminChat === [] ? "" : setAdminChat(data);
         }
         fetchMembers();
-    })
+    },[])
 
-    return  AdminChat.map((item,index) => <ChatBox obj={item} key={index} />)
+  const elements = (
+    <div className="w-[100%] h-[100%] px-4 py-4 overflow-auto hide-scrollbar">
+      {AdminChat.map((item, index) => (
+        <ChatBox obj={item} key={index} />
+      ))}
+    </div>
+  );
+  return elements
 }
 
 export default memo(ChatMembers)
