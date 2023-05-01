@@ -36,6 +36,7 @@ function ChatMembers() {
               country: item.nat,
             };
           });
+          
           AdminChat === [] ? "" : setAdminChat(data);
         }
         fetchMembers();
