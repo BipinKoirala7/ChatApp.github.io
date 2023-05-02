@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 function ChatBox(props) {
   const time = new Date
-  console.log(props)
     return (
         <NavLink to={`${props.obj.login.uuid}`} state={props.obj} style={(isActive) => {
         return isActive.isActive ? { backgroundColor: "rgb(255,255,255)" } : { backgroundColor: '' }

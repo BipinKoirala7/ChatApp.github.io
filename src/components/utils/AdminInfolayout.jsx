@@ -1,11 +1,12 @@
-import React, { memo } from "react";
+import { memo } from "react";
+import AdminImg from '../../assets/Bipin.jpg'
 
 function AdminInfoLayout(props) {
-    const {name,profession,picture} = props.info
+    const {name,profession} = props.info.AdminInfo
     return (
       <div className="flex py-6 gap-4 items-center">
         <img
-          src={picture.medium}
+          src={AdminImg}
           alt=""
           className="w-16 aspect-square bg-gray-500 rounded-[50%]"
         />

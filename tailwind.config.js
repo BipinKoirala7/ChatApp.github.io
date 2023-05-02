@@ -6,6 +6,9 @@ export default {
       gridTemplateColumns: {
         "app-grid": "1fr 2fr 1fr",
       },
+      gridTemplateRows: {
+        "chat-grid":"1fr 6fr 1fr",
+      }
     },
   },
   plugins: [],

@@ -2,7 +2,7 @@ import { useState, useEffect, memo } from "react";
 import ChatBox from "./ChatBox";
 
 function ChatMembers() {
-    const [AdminChat, setAdminChat] = useState([]);
+  const [AdminChat, setAdminChat] = useState(JSON.parse(localStorage.getItem('Chat')) || []);
     useEffect(() => {
         async function fetchMembers() {
           const res = await fetch("https://randomuser.me/api/1.4/?results=15");
@@ -34,17 +34,17 @@ function ChatMembers() {
               cell: item.cell,
               picture: item.picture,
               country: item.nat,
-            };
-          });
-          
-          AdminChat === [] ? "" : setAdminChat(data);
+            }
+          })
+          AdminChat.length === 0 ? localStorage.setItem('Chat',JSON.stringify(data)) :''
+          AdminChat === 0 ? setAdminChat(data) : ''
         }
         fetchMembers();
     },[])
 
   const elements = (
     <div className="w-[100%] h-[100%] px-4 py-4 overflow-auto hide-scrollbar">
-      {AdminChat.map((item, index) => (
+      { AdminChat.map((item, index) => (
         <ChatBox obj={item} key={index} />
       ))}
     </div>

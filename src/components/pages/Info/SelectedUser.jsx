@@ -22,11 +22,13 @@ function Info() {
               <p className="text-slate-500 px-2">Full-time</p>
             </div>
             <div className="flex gap-4">
-              <button className="px-2 flex items-center gap-2 py-[.4em] rounded-[.5em] border-2 border-slate-900">
-                <i className="fa-solid fa-share"></i>Message
+              <button className="px-2 flex items-center gap-2 py-[.4em] rounded-[.5em] border-2 border-slate-900 hover:text-white hover:bg-slate-900 transition-effect">
+                <i className="fa-solid fa-share"></i>
+                <p>Message</p>
               </button>
-              <button className="px-2 flex items-center gap-2 py-[.4em] rounded-[.5em] bg-blue-600 text-white">
-                <i className="fa-solid fa-message"></i>Share Profile
+              <button className="px-2 flex items-center gap-2 py-[.4em] rounded-[.5em] bg-blue-600 text-white transition-effect hover:text-blue-600 hover:bg-blue-200 ">
+                <i className="fa-solid fa-message"></i>
+                <p>Share Profile</p>
               </button>
             </div>
             <fieldset className="grid grid-cols-2 gap-4 w-fit border-2 border-black px-4 py-2 rounded-2xl">
@@ -48,11 +50,7 @@ function Info() {
                 <p className="font-bold text-lg">{state.login.username}</p>
               </button>
             </fieldset>
-            </div>
-                
-
-
-
+          </div>
 
           <div className="flex flex-col mr-auto ml-auto items-center justify-center min-w-[30%]">
             <div className="flex w-[100%] py-4">

@@ -1,17 +1,17 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 const UserContext = createContext()
 
 function UserContextProvider(props) {
-    const AdminInfo = {
+    const [AdminInfo, setAdminInfo] = useState({
         gender: "Male",
         name: "Bipin koirala",
-        profession:'Senior Developer',
+        profession: 'Senior Developer',
         location: {
             city: 'Pokhara',
             state: "Gandaki",
             country: 'Nepal',
-            postCode:'33400'
+            postCode: '33400'
         },
         login: {
             uuid: 'Admin',
@@ -21,19 +21,24 @@ function UserContextProvider(props) {
         },
         DOB: {
             date: '2005/05/03 Sunday',
-            age:'18'
+            age: '18'
         },
         phone: '9846472341',
         cell: '061-560505',
         picture: {
             large: '',
-            medium: '',
-            thumbnail:'',
+            medium: '../../../assests/Bipin.jpg',
+            thumbnail: '',
         },
-        country:'Nepal'
-
+        country: 'Nepal',
+        conversation: {
+            
         }
-        return <UserContext.Provider value={AdminInfo}>{props.children}</UserContext.Provider>
+    })
+    function changeInfo(newObj) {
+      setAdminInfo(newObj)  
+    }
+        return <UserContext.Provider value={{AdminInfo:AdminInfo,ChangeAdminInfo:changeInfo}}>{props.children}</UserContext.Provider>
     }
 
 export {UserContext,UserContextProvider}
