@@ -8,6 +8,7 @@ import Dashboard from "./components/pages/Dashboard/Dashboard";
 import InfoPage from './components/pages/Info/SelectedUser'
 
 function App() {
+  console.log('App component rendered')
   return (
     <div className="w-[100%] max-h-screen grid grid-cols-app-grid">
       <Dashboard />

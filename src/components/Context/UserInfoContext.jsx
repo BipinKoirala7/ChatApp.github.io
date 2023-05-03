@@ -3,6 +3,7 @@ import { createContext, useState } from "react";
 const UserContext = createContext()
 
 function UserContextProvider(props) {
+    console.log("UserContext rendered");
     const [AdminInfo, setAdminInfo] = useState({
         gender: "Male",
         name: "Bipin koirala",
@@ -31,9 +32,7 @@ function UserContextProvider(props) {
             thumbnail: '',
         },
         country: 'Nepal',
-        conversation: {
-            
-        }
+        conversation: []
     })
     function changeInfo(newObj) {
       setAdminInfo(newObj)  

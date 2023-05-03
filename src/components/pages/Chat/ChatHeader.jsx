@@ -1,7 +1,7 @@
 import { memo } from "react";
-import Chat from "./Chat";
 
 function ChatHeader(props) {
+  console.log("Chat Header component rendered");
     return (
       <div className="row-span-1 flex items-center justify-between py-2 px-8 bg-slate-100 border-b-[.2em] border-slate-300">
         <div className="flex items-center gap-2">

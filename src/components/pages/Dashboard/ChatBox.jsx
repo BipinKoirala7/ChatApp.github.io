@@ -2,6 +2,7 @@ import { memo } from "react"
 import { NavLink } from "react-router-dom";
 
 function ChatBox(props) {
+  console.log("Chat Box component rendered");
   const time = new Date
     return (
         <NavLink to={`${props.obj.login.uuid}`} state={props.obj} style={(isActive) => {

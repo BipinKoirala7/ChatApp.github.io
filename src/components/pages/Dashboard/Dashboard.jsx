@@ -4,6 +4,7 @@ import AdminInfolayout from "../../utils/AdminInfolayout";
 import ChatMembers from "./ChatMembers";
 
 function DashBoard() {
+  console.log("Dashboard component rendered");
   const UserInfo = useContext(UserContext)
 
   return (

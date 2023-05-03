@@ -2,6 +2,7 @@ import { memo } from "react";
 import AdminImg from '../../assets/Bipin.jpg'
 
 function AdminInfoLayout(props) {
+  console.log("AdminInfoLayout component rendered");
     const {name,profession} = props.info.AdminInfo
     return (
       <div className="flex py-6 gap-4 items-center">

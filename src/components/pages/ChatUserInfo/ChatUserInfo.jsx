@@ -2,8 +2,8 @@ import { memo } from "react";
 import { useLocation ,NavLink} from "react-router-dom";
 
 function CurrentChatUserInfo() {
+  console.log("Chat User Info component rendered");
     const { state } = useLocation()
-    console.log(state)
     return (
       <div className="flex items-center gap-4 flex-col px-4 py-4 bg-slate-100">
         <NavLink to={`/info/${state.login.uuid}`} state={state}>

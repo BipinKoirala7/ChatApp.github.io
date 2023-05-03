@@ -2,8 +2,8 @@ import { memo } from "react";
 import { useLocation } from "react-router-dom";
 
 function Info() {
+  console.log("Selected user component rendered");
     const {state} = useLocation()
-    console.log(state)
     return (
       <div className="relative gap-[5em] mr-auto ml-auto mt-2 mb-2 flex flex-col w-[90%] col-start-2 col-end-4">
         <div className=" gradient rounded-t-[1em] h-[13em] bg-slate-400"></div>

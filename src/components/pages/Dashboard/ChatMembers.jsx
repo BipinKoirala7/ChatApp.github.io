@@ -2,6 +2,7 @@ import { useState, useEffect, memo } from "react";
 import ChatBox from "./ChatBox";
 
 function ChatMembers() {
+  console.log("Chat Members component rendered");
   const [AdminChat, setAdminChat] = useState(JSON.parse(localStorage.getItem('Chat')) || []);
     useEffect(() => {
         async function fetchMembers() {

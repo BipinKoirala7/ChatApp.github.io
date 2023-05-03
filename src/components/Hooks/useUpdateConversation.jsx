@@ -1,10 +1,28 @@
 import useFetch from "./useFetch";
+import { UserContext } from '../Context/UserInfoContext'
+import { useContext, useEffect } from "react";
 
-async function  useUpdateConversation(text, friend) {
-    if (text) {
-        // const reply = await useFetch(text)
-        console.log(reply)
-    }
+function useUpdateConversation(text, friend, id) {
+    console.log("Custom hook Update Conversation rendered");
+    const { ChangeAdminInfo } = useContext(UserContext);
+    useEffect(() => {
+        if (text) {
+            const msgObj = {
+                text: text,
+                id: id,
+                Send_to: friend,
+                type: "send",
+            };
+            ChangeAdminInfo(prev => {
+
+                return ({
+                    ...prev,
+                    [prev.conversation]:prev.conversation.push(msgObj)
+                })
+            })
+        }
+    },[text,friend,id])
+    return true
 }
 
 export default useUpdateConversation
