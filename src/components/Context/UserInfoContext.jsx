@@ -32,7 +32,6 @@ function UserContextProvider(props) {
             thumbnail: '',
         },
         country: 'Nepal',
-        conversation: []
     })
     function changeInfo(newObj) {
       setAdminInfo(newObj)  

@@ -1,28 +1,15 @@
-import useFetch from "./useFetch";
-import { UserContext } from '../Context/UserInfoContext'
-import { useContext, useEffect } from "react";
+import { useMemo, useRef } from "react";
+import useLocalStorage from "./useLocalStorage";
 
-function useUpdateConversation(text, friend, id) {
-    console.log("Custom hook Update Conversation rendered");
-    const { ChangeAdminInfo } = useContext(UserContext);
-    useEffect(() => {
-        if (text) {
-            const msgObj = {
-                text: text,
-                id: id,
-                Send_to: friend,
-                type: "send",
-            };
-            ChangeAdminInfo(prev => {
-
-                return ({
-                    ...prev,
-                    [prev.conversation]:prev.conversation.push(msgObj)
-                })
-            })
-        }
-    },[text,friend,id])
-    return true
+export default function useUpdateConversation(obj) {
+    const key = 'conversation'
+    let fullConversation = JSON.parse(localStorage.getItem(key)) || [];
+    const NewConversation = useRef();
+    useMemo(() => {
+        NewConversation.current = obj;
+        Object.keys(obj).length === 0
+          ? ""
+          : fullConversation.push(NewConversation.current);
+        },[obj.text,obj.id])
+    useLocalStorage(key, fullConversation);
 }
-
-export default useUpdateConversation

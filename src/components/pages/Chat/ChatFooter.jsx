@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 function ChatFooter(props) {
   const [text, setText] = useState('')
-  const ref = useRef(null)
+  const ref = useRef('')
 
   function handleclick() {
     props.setmsg(text)
