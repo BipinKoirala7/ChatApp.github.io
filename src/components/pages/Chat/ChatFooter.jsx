@@ -12,7 +12,7 @@ function ChatFooter(props) {
   }
   console.log("Chat footer component rendered");
     return (
-      <div className="sticky bottom-[-1] bg-white row-span-3 border-t-[.2em] px-6 py-4">
+      <div className="sticky bottom-0 bg-white row-span-3 border-t-[.2em] px-6 py-4">
         <div className="flex gap-2 bg-slate-100 rounded-[2em] justify-evenly border-slate-300 px-2 py-2 h-[100%] items-center">
           <i className="fa-solid fa-microphone transition-effect flex items-center justify-center rounded-[50%] text-slate-500 w-16 aspect-square text-[1.2em] cursor-pointer hover:bg-slate-300 "></i>
           <input

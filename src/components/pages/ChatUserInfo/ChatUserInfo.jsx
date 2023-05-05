@@ -5,7 +5,7 @@ function CurrentChatUserInfo() {
   console.log("Chat User Info component rendered");
     const { state } = useLocation()
     return (
-      <div className="flex items-center gap-4 flex-col px-4 py-4 bg-slate-100">
+      <div className="flex items-center gap-4 flex-col px-4 py-4 bg-slate-100 max-h-screen h-screen">
         <NavLink to={`/info/${state.login.uuid}`} state={state}>
           <button className="flex items-center transition-effect gap-2 border-2 border-blue-600 px-2 py-[5px] rounded-[1em] text-blue-900 hover:bg-blue-500 hover:text-white ">
             <i className="fa-regular fa-circle-question text-[1.3em]"></i>
@@ -18,13 +18,13 @@ function CurrentChatUserInfo() {
           alt=""
         />
         <div className="flex flex-col py-4 px-4 w-fit justify-center items-center border-2 rounded-[2em]">
-          <p className="text-[1.5em] text-blue-800">{state.name}</p>
+          <p className="text-[1.5rem] text-blue-800">{state.name}</p>
           <p>{state.profession}</p>
         </div>
         <div className="flex w-[100%] py-4">
           <div className="flex flex-col items-center gap-2 border-e-2 w-[50%]">
-            <button className="bg-blue-200 w-[5em] aspect-square rounded-[50%] grid place-items-center">
-              <i className="fa-solid fa-comment text-[2.5em] text-blue-600 aspect-square"></i>
+            <button className="bg-blue-200 w-[5rem] aspect-square rounded-[50%] grid place-items-center">
+              <i className="fa-solid fa-comment text-[2.5rem] text-blue-600 aspect-square"></i>
             </button>
             <p>Chat</p>
           </div>

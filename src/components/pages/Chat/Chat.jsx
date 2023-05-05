@@ -16,7 +16,7 @@ function Chat() {
   }
 console.log("chat component rendered");
     return (
-      <div className="grid grid-rows-chat-grid grid-cols-1">
+      <div className="grid grid-rows-chat-grid grid-cols-1 max-h-screen">
         <ChatHeader name={state.name} picture={state.picture.medium} />
         <div className="row-span-2 flex flex-col overflow-y-scroll px-4 py-4 hide-scrollbar gap-[2px]">
         {conversation}
