@@ -13,7 +13,9 @@ function useGetConversation(text, friend, id,picture) {
           type: "send",
         };
     }
-    useUpdateConversation(messageObj.current);
+  const conversation = useUpdateConversation(messageObj.current);
+  const specific = conversation.filter(item => item.id === id)
+  return specific.map((item, index) => <ChatTextStyle picture={picture} obj={item} key={index} />)
 }
 
 export default useGetConversation

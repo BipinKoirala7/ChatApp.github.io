@@ -5,6 +5,10 @@ function ChatFooter(props) {
   const [text, setText] = useState('')
   const ref = useRef('')
 
+  document.addEventListener('keydown', (e) => {
+    if(e.key == 'Enter'){handleclick()}
+  })
+
   function handleclick() {
     props.setmsg(text)
     ref.current.focus()

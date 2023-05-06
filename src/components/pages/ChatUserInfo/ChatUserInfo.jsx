@@ -5,7 +5,7 @@ function CurrentChatUserInfo() {
   console.log("Chat User Info component rendered");
     const { state } = useLocation()
     return (
-      <div className="flex items-center gap-4 flex-col px-4 py-4 bg-slate-100 max-h-screen h-screen">
+      <div className="flex items-center gap-2 flex-col px-4 py-4 bg-slate-100 max-h-screen">
         <NavLink to={`/info/${state.login.uuid}`} state={state}>
           <button className="flex items-center transition-effect gap-2 border-2 border-blue-600 px-2 py-[5px] rounded-[1em] text-blue-900 hover:bg-blue-500 hover:text-white ">
             <i className="fa-regular fa-circle-question text-[1.3em]"></i>
@@ -23,14 +23,14 @@ function CurrentChatUserInfo() {
         </div>
         <div className="flex w-[100%] py-4">
           <div className="flex flex-col items-center gap-2 border-e-2 w-[50%]">
-            <button className="bg-blue-200 w-[5rem] aspect-square rounded-[50%] grid place-items-center">
-              <i className="fa-solid fa-comment text-[2.5rem] text-blue-600 aspect-square"></i>
+            <button className="bg-blue-200 w-[4.5rem] aspect-square rounded-[50%] grid place-items-center">
+              <i className="fa-solid fa-comment text-[2.3rem] text-blue-600 aspect-square"></i>
             </button>
             <p>Chat</p>
           </div>
           <div className="flex flex-col items-center gap-2 w-[50%] border-s-2">
-            <button className="bg-blue-200 w-[5em] aspect-square rounded-[50%] grid place-items-center">
-              <i className="fa-solid fa-video  text-[2.5em] text-blue-600 aspect-square"></i>
+            <button className="bg-blue-200 w-[4.5em] aspect-square rounded-[50%] grid place-items-center">
+              <i className="fa-solid fa-video  text-[2.3em] text-blue-600 aspect-square"></i>
             </button>
             <p>Video</p>
           </div>
@@ -61,7 +61,7 @@ function CurrentChatUserInfo() {
               Image
             </button>
           </div>
-          <button className="mt-4 transition-effect w-fit hover:bg-blue-200 px-4 rounded-[1em] text-blue-800 mr-auto ml-auto border-2 border-blue-700">
+          <button className="mt-2 transition-effect w-fit hover:bg-blue-200 px-4 rounded-[1em] text-blue-800 mr-auto ml-auto border-[2px] border-blue-700">
             View all
           </button>
         </div>

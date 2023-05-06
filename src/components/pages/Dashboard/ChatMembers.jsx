@@ -2,6 +2,7 @@ import { useState, useEffect, memo } from "react";
 import ChatBox from "./ChatBox";
 
 function ChatMembers() {
+  // Use if or ternary to check for the Admin Chat in empty or not so that the fetch doenot run everytime
   console.log("Chat Members component rendered");
   const [AdminChat, setAdminChat] = useState(JSON.parse(localStorage.getItem('Chat')) || []);
     useEffect(() => {
@@ -12,6 +13,7 @@ function ChatMembers() {
             const date = new Date(item.dob.date);
             return {
               gender: item.gender,
+              isFavourite: false,
               name: item.name.first +" " + item.name.last,
               profession: "Senior Developer",
               location: {
