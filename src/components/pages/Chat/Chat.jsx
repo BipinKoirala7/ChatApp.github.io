@@ -1,15 +1,13 @@
-import {memo,useState,useEffect} from "react";
+import {memo,useState} from "react";
 import { useLocation } from "react-router-dom";
 
-import useGetConversation from "../../Hooks/useGetConversation";
 import ChatFooter from './ChatFooter'
 import ChatHeader from "./ChatHeader";
-import ChatTextStyle from "../../utils/ChatTextStyle";
+import ChatSection from './ChatSection'
 
 function Chat() {
   const { state } = useLocation()
   const [msg, setmsg] = useState('')
-  const conversation = useGetConversation(msg, state.name, state.login.uuid, state.picture.medium)
   
   function handleclick(text) {
     setmsg(text)
@@ -18,9 +16,7 @@ console.log("chat component rendered");
     return (
       <div className="grid grid-rows-chat-grid grid-cols-1 max-h-screen">
         <ChatHeader name={state.name} picture={state.picture.medium} />
-        <div className="row-span-2 flex flex-col overflow-y-scroll px-4 py-4 hide-scrollbar gap-[2px]">
-        {conversation}
-        </div>
+        <ChatSection id={state.login.uuid} name={state.name} picture={state.picture.medium} msg={msg} />
         <ChatFooter name={state.name} setmsg={handleclick} />
       </div>
     );

@@ -26,4 +26,5 @@ background: #B993D6;
 dialog::backdrop{
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(10px);
+    transition: easi-in-out 1s;
 }

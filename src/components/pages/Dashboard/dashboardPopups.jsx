@@ -24,7 +24,7 @@ export default function DashboardModals(props) {
                 onClick={() => {
                     closeFn()
                     UserOptnsRef.current.close();
-                        }}
+                      }}
             >
               <i className="fa-solid fa-xmark transition-effect w-8 h-8 flex items-center justify-center rounded-[50%] hover:bg-slate-400 hover:text-white "></i>
             </button>
